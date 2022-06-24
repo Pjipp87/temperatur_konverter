@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.temperatur_konverter.ConverterController">
+   <children>
+      <Label layoutX="6.0" layoutY="67.0" text="Temperatur" />
+      <TextField fx:id="inputNumber" layoutX="91.0" layoutY="63.0" />
+      <RadioButton fx:id="celsius" layoutX="100.0" layoutY="129.0" mnemonicParsing="false" text="Celsius">
+         <toggleGroup>
+            <ToggleGroup fx:id="values" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="fahrenheit" layoutX="182.0" layoutY="129.0" mnemonicParsing="false" text="Fahrenheit" toggleGroup="$values" />
+      <Label layoutX="6.0" layoutY="129.0" text="Umwandeln in" />
+      <Label layoutX="6.0" layoutY="202.0" text="Ergebnis" />
+      <Label fx:id="result" layoutX="91.0" layoutY="202.0" text="placeholder" visible="false" />
+      <Label layoutX="12.0" layoutY="14.0" text="Temperatur Konverter" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="convert" layoutX="91.0" layoutY="159.0" mnemonicParsing="false" onAction="#converter" text="Umwandeln" />
+      <Label fx:id="errorMessage" layoutX="91.0" layoutY="89.0" text="Fehlerausgabe" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
